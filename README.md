@@ -20,15 +20,6 @@ The legacy SDKs will be installed (on disk) in their individual `Cellar` directo
 
 **IMPORTANT:** If you are using the appstore version of Xcode, you must re-run `link-sdks` after *EVERY* upgrade to Xcode.  This step will be performed automatically if using the Xcode cask.
 
-The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the last released version of each iOS major SDK is provided - which are:
-
- - iOS 8.4 (as `xc-sdk-ios-8`)
- - iOS 7.1 (as `xc-sdk-ios-7`)
- - iOS 6.1 (as `xc-sdk-ios-6`)
- - iOS 5.1 (as `xc-sdk-ios-5`)
- - iOS 4.3 (as `xc-sdk-ios-4`)
- - iOS 3.2 (as `xc-sdk-ios-3`)
-
 
 Downloads
 ---------
@@ -51,6 +42,15 @@ The following is a list of downloads (and their locations) which need to be down
 | Auxiliary Tools for Xcode - Late July 2012            | [xcode44auxtools6938114a.dmg][]       | *c:*`packagemaker`                                                                                                |
 
 <b>*</b> **Note:** The SDKs from these versions of Xcode are untested and may not work or link without additional patches or packages.  See how [this project](https://github.com/devernay/xcodelegacy/blob/master/XcodeLegacy.sh) handles compilers and patches for details.
+
+The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the last released version of each iOS major SDK is provided - which are:
+
+ - iOS 8.4 (as `xc-sdk-ios-8`)
+ - iOS 7.1 (as `xc-sdk-ios-7`)
+ - iOS 6.1 (as `xc-sdk-ios-6`)
+ - iOS 5.1 (as `xc-sdk-ios-5`)
+ - iOS 4.3 (as `xc-sdk-ios-4`)
+ - iOS 3.2 (as `xc-sdk-ios-3`)
 
 [//]: # (Download links)
 [Xcode_7.3.1.dmg]: http://adcdownload.apple.com/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg
