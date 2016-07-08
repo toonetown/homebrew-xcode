@@ -1,18 +1,15 @@
-homebrew-xcode
-==============
+# homebrew-xcode #
 
 Homebrew tap with formulas and casks for installing Xcode, legacy SDKs, and other developer tools.
 
 
-Installation
-------------
+## Installation ##
 
 To install: `brew tap toonetown/homebrew-xcode`.
 
 **Note:** You will be unable to install the Xcode cask if you already have the appstore version installed.
 
-Details
--------
+### Details ###
 
 The Xcode cask will be installed into `/Applications` (or wherever you have `--appdir` set).  The developer tool casks will be installed into `/Applications/Developer` (or within the `Developer` directory wherever you have `--appdir` set).
 
@@ -21,8 +18,7 @@ The legacy SDKs will be installed (on disk) in their individual `Cellar` directo
 **IMPORTANT:** If you are using the appstore version of Xcode, you must re-run `link-sdks` after *EVERY* upgrade to Xcode.  This step will be performed automatically if using the Xcode cask.
 
 
-Downloads
----------
+## Downloads ##
 
 In order to use these formulas, you will need to download the binaries from Apple.  This can be done by logging in with your developer account at <https://developer.apple.com/downloads/> and then downloading the file.  You can view the exact file that will be downloaded by running `brew info` or `brew cask info` and looking in the `caveats` section.  Do not rename the files as you download them.
 
@@ -42,6 +38,8 @@ The following is a list of downloads (and their locations) which need to be down
 | Auxiliary Tools for Xcode - Late July 2012            | [xcode44auxtools6938114a.dmg][]       | *c:*`packagemaker`                                                                                                |
 
 <b>* Note:</b> The SDKs from these versions of Xcode are untested and may not work or link without additional patches or packages.  See how [this project](https://github.com/devernay/xcodelegacy/blob/master/XcodeLegacy.sh) handles compilers and patches for details.
+
+### iOS SDKs ###
 
 The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the last released version of each iOS major SDK is provided - which are:
 
