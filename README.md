@@ -3,9 +3,16 @@ homebrew-xcode
 
 Homebrew tap with formulas and casks for installing Xcode, legacy SDKs, and other developer tools.
 
+
+Installation
+------------
+
 To install: `brew tap toonetown/homebrew-xcode`.
 
 **Note:** You will be unable to install the Xcode cask if you already have the appstore version installed.
+
+Details
+-------
 
 The Xcode cask will be installed into `/Applications` (or wherever you have `--appdir` set).  The developer tool casks will be installed into `/Applications/Developer` (or within the `Developer` directory wherever you have `--appdir` set).
 
