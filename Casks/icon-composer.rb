@@ -1,5 +1,5 @@
 require 'pathname'
-require Pathname(path).realpath.dirname.join('../lib', 'xcode-paths')
+require Pathname(path).realpath.dirname.join('../lib', 'xcode-common')
 AC_DOWNLOAD_URL = 'Graphics_Tools_for_Xcode_7.2/Graphics_Tools_for_Xcode_7.2.dmg'.freeze
 
 cask 'icon-composer' do

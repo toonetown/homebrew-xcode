@@ -1,5 +1,5 @@
 require 'pathname'
-require Pathname(path).realpath.dirname.join('../lib', 'xcode-paths')
+require Pathname(path).realpath.dirname.join('../lib', 'xcode-common')
 AC_DOWNLOAD_URL = 'auxiliary_tools_for_xcode__late_july_2012/xcode44auxtools6938114a.dmg'.freeze
 
 cask 'packagemaker' do
