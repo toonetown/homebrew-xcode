@@ -41,7 +41,7 @@ The following is a list of downloads (and their locations) which need to be down
 | Graphics Tools for Xcode 7.2                          | [Graphics_Tools_for_Xcode_7.2.dmg][]  | *c:*`icon-composer`                                                                                               |
 | Auxiliary Tools for Xcode - Late July 2012            | [xcode44auxtools6938114a.dmg][]       | *c:*`packagemaker`                                                                                                |
 
-<b>*</b> **Note:** The SDKs from these versions of Xcode are untested and may not work or link without additional patches or packages.  See how [this project](https://github.com/devernay/xcodelegacy/blob/master/XcodeLegacy.sh) handles compilers and patches for details.
+<b>* Note:</b> The SDKs from these versions of Xcode are untested and may not work or link without additional patches or packages.  See how [this project](https://github.com/devernay/xcodelegacy/blob/master/XcodeLegacy.sh) handles compilers and patches for details.
 
 The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the last released version of each iOS major SDK is provided - which are:
 
