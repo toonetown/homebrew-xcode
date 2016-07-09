@@ -29,26 +29,28 @@ The following is a list of downloads (and their locations) which need to be down
 |                         Name                          |               Download                | Used by                                                                                                           |
 |-------------------------------------------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Xcode 7.3.1                                           | [Xcode_7.3.1.dmg][]                   | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
-| Xcode 6.4                                             | [Xcode_6.4.dmg][]                     | *f:*`xc-sdk-osx-1010`<br>*f:*`xc-sdk-osx-109`<br>*f:*`xc-sdk-ios-8`                                               |
-| Xcode 5.1.1                                           | [xcode_5.1.1.dmg][]                   | *f:*`xc-sdk-osx-108`<br>*f:*`xc-sdk-ios-7`                                                                        |
-| <b>*</b>Xcode 4.6.3                                   | [xcode4630916281a.dmg][]              | *f:*`xc-sdk-osx-107`<br>*f:*`xc-sdk-ios-6`                                                                        |
-| <b>*</b>Xcode 4.4.1                                   | [xcode_4.4.1_6938145.dmg][]           | *f:*`xc-sdk-ios-5`                                                                                                |
-| <b>*</b>Xcode 3.2.6 and iOS SDK 4.3 for Snow Leopard  | [xcode_3.2.6_and_ios_sdk_4.3.dmg][]   | *f:*`xc-sdk-osx-106`<br>*f:*`xc-sdk-osx-105`<br>*f:*`xc-sdk-osx-104`<br>*f:*`xc-sdk-ios-4`<br>*f:*`xc-sdk-ios-3`  |
+| Xcode 6.4                                             | [Xcode_6.4.dmg][]                     | *f:*`xc-sdk-osx1010`<br>*f:*`xc-sdk-osx109`<br>*f:*`xc-sdk-ios8`                                                  |
+| Xcode 5.1.1                                           | [xcode_5.1.1.dmg][]                   | *f:*`xc-sdk-osx108`<br>*f:*`xc-sdk-ios7`                                                                          |
+| <b>*</b>Xcode 4.6.3                                   | [xcode4630916281a.dmg][]              | *f:*`xc-sdk-osx107`<br>*f:*`xc-sdk-ios6`                                                                          |
+| <b>*</b>Xcode 4.4.1                                   | [xcode_4.4.1_6938145.dmg][]           | *f:*`xc-sdk-ios5`                                                                                                 |
+| <b>**</b>Xcode 3.2.6 and iOS SDK 4.3 for Snow Leopard | [xcode_3.2.6_and_ios_sdk_4.3.dmg][]   | *f:*`xc-sdk-osx106`<br>*f:*`xc-sdk-osx105`<br>*f:*`xc-sdk-osx104`<br>*f:*`xc-sdk-ios4`<br>*f:*`xc-sdk-ios3`       |
 | Graphics Tools for Xcode 7.2                          | [Graphics_Tools_for_Xcode_7.2.dmg][]  | *c:*`icon-composer`                                                                                               |
 | Auxiliary Tools for Xcode - Late July 2012            | [xcode44auxtools6938114a.dmg][]       | *c:*`packagemaker`                                                                                                |
 
 <b>* Note:</b> The SDKs from these versions of Xcode are untested and may not work or link without additional patches or packages.  See how [this project](https://github.com/devernay/xcodelegacy/blob/master/XcodeLegacy.sh) handles compilers and patches for details.
 
+<b>** Note:</b> The SDKs that depend upon Xcode 3.2.6 have not yet been implemented.
+
 ### iOS SDKs ###
 
 The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the last released version of each iOS major SDK is provided - which are:
 
- - iOS 8.4 (as `xc-sdk-ios-8`)
- - iOS 7.1 (as `xc-sdk-ios-7`)
- - iOS 6.1 (as `xc-sdk-ios-6`)
- - iOS 5.1 (as `xc-sdk-ios-5`)
- - iOS 4.3 (as `xc-sdk-ios-4`)
- - iOS 3.2 (as `xc-sdk-ios-3`)
+ - iOS 8.4 (as `xc-sdk-ios8`)
+ - iOS 7.1 (as `xc-sdk-ios7`)
+ - iOS 6.1 (as `xc-sdk-ios6`)
+ - iOS 5.1 (as `xc-sdk-ios5`)
+ - iOS 4.3 (as `xc-sdk-ios4`)
+ - iOS 3.2 (as `xc-sdk-ios3`)
 
 [//]: # (Download links)
 [Xcode_7.3.1.dmg]: http://adcdownload.apple.com/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg
