@@ -28,7 +28,7 @@ cask 'xcode' do
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--switch', appdir.join('Xcode.app')
 
     ohai 'Agreeing to license'
-    system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcodebuild', '-license'
+    system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcodebuild', '-license', 'accept'
 
     ohai 'Relinking SDKs'
     system 'link-sdks', '--xcodePath', appdir.join('Xcode.app').to_s
