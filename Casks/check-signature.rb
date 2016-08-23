@@ -1,5 +1,5 @@
 require 'pathname'
-require Pathname(path).realpath.dirname.join('../lib', 'xcode-common')
+require Pathname(path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
 AC_DOWNLOAD_URL = 'signaturecheck/signaturecheck.dmg'.freeze
 
 cask 'check-signature' do

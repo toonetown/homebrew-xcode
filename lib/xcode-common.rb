@@ -19,3 +19,5 @@ def xcode_caveats(ac_download_url); <<-EOS.undent
 
   EOS
 end
+
+def xcode_common; end

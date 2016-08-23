@@ -1,7 +1,7 @@
 require "pathname"
 require "formula"
 require "keg"
-require Pathname(__FILE__).realpath.dirname.join("xcode-common")
+require Pathname(__FILE__).realpath.dirname.join("xcode-common") unless defined?(xcode_common)
 
 # Override this function so that we don't do anything with the install_name tool
 class Keg
@@ -87,3 +87,5 @@ class XcSdkFormula < Formula
     attr_rw :ac_download_url, :platforms
   end
 end
+
+def xc_sdk_formula; end

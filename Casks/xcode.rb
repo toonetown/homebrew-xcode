@@ -1,5 +1,5 @@
 require 'pathname'
-require Pathname(path).realpath.dirname.join('../lib', 'xcode-common')
+require Pathname(path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
 AC_DOWNLOAD_URL = 'Xcode_7.3.1/Xcode_7.3.1.dmg'.freeze
 
 cask 'xcode' do
