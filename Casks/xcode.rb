@@ -1,10 +1,10 @@
 require 'pathname'
 require Pathname(path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_7.3.1/Xcode_7.3.1.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_8/Xcode_8.dmg'.freeze
 
 cask 'xcode' do
-  version '7.3.1'
-  sha256 'bb0dedf613e86ecb46ced945913fa5069ab716a0ade1035e239d70dee0b2de1b'
+  version '8'
+  sha256 '21461e76f283c1dd97d240451d8935f2779f5f1fabb7eef51740897aa3ae07ec'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode'
@@ -23,15 +23,17 @@ cask 'xcode' do
   app 'Xcode.app'
 
   postflight do
+    app_location = appdir.join(@cask.artifacts[:app].first.first).to_s
+    
     # Select this version of xcode
     ohai 'Selecting default version of Xcode (may require sudo)'
-    system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--switch', appdir.join('Xcode.app')
+    system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--switch', app_location
 
     ohai 'Agreeing to license'
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcodebuild', '-license', 'accept'
 
     ohai 'Relinking SDKs'
-    system 'link-sdks', '--xcodePath', appdir.join('Xcode.app').to_s
+    system 'link-sdks', '--xcodePath', app_location
   end
 
   uninstall_postflight do
@@ -40,5 +42,5 @@ cask 'xcode' do
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--reset'
   end
 
-  caveats xcode_caveats(AC_DOWNLOAD_URL)
+  caveats xcode_xip_caveats(AC_DOWNLOAD_URL, artifacts[:app].first.first)
 end

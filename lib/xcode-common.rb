@@ -20,4 +20,21 @@ def xcode_caveats(ac_download_url); <<-EOS.undent
   EOS
 end
 
+def xcode_xip_caveats(ac_download_url, appname)
+  xcode_caveats(ac_download_url.gsub(/\.dmg$/, '.xip')) + <<-EOS.undent
+  After downloading the file, convert the xip to a dmg by opening a 
+  terminal to the folder where the xip is placed and run the 
+  following commands:
+    $ open #{ac_download_url.split("/")[-1].gsub(/\.dmg$/, '.xip')}
+    $ mkdir Xcode-tmp
+    $ mv #{appname} Xcode-tmp/#{appname}
+    $ hdiutil create -volname "Xcode" \\
+                     -srcfolder Xcode-tmp \\
+                     -ov -format UDZO \\
+                     #{ac_download_url.split("/")[-1]}
+    $ rm -rf Xcode-tmp
+
+  EOS
+end
+
 def xcode_common; end
