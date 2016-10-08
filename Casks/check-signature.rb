@@ -9,7 +9,6 @@ cask 'check-signature' do
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Signature Check'
   homepage DEV_HOMEPAGE
-  license :commercial
 
   binary 'check-signature'
 

@@ -9,7 +9,6 @@ cask 'packagemaker' do
   url xcode_url(AC_DOWNLOAD_URL)
   name 'PackageMaker'
   homepage DEV_HOMEPAGE
-  license :commercial
 
   app 'PackageMaker.app', target: 'Developer/PackageMaker.app'
 

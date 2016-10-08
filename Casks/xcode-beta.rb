@@ -9,7 +9,6 @@ cask 'xcode-beta' do
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode-beta'
   homepage DEV_HOMEPAGE
-  license :commercial
 
   depends_on formula: 'toonetown/xcode/link-sdks'
 

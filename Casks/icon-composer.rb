@@ -9,7 +9,6 @@ cask 'icon-composer' do
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Icon Composer'
   homepage DEV_HOMEPAGE
-  license :commercial
 
   app 'Icon Composer.app', target: 'Developer/Icon Composer.app'
 
