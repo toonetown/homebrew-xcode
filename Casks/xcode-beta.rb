@@ -1,5 +1,5 @@
 require 'pathname'
-require Pathname(path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
+require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
 AC_DOWNLOAD_URL = 'Xcode_8.1_beta_2/Xcode_8.1_beta_2.dmg'.freeze
 
 cask 'xcode-beta' do
