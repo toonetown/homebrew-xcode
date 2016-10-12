@@ -1,10 +1,10 @@
 require 'pathname'
 require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_8.1_beta_2/Xcode_8.1_beta_2.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_8.1_beta_3/Xcode_8.1_beta_3.dmg'.freeze
 
 cask 'xcode-beta' do
-  version '8.1_beta_2'
-  sha256 '6237b4edc5f6fabdb18905e55f820fe6211b422d1764e77b67b049bad850564a'
+  version '8.1_beta_3'
+  sha256 'd8bfcab50106c008b583c8254bc658fd381945f30e4642a2a4824e8dfea6436d'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode-beta'
