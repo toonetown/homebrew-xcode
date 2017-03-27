@@ -1,9 +1,9 @@
 require 'pathname'
 require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_8.2.1/Xcode_8.2.1.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_8.3/Xcode_8.3.dmg'.freeze
 
 cask 'xcode' do
-  version '8.2.1'
+  version '8.3'
   sha256 'a575614bc5a49094abf6ec2e9a3f5109b58b200bd6dc1d2d2c286b512ddba0db'
 
   url xcode_url(AC_DOWNLOAD_URL)
