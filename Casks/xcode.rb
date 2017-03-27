@@ -4,7 +4,7 @@ AC_DOWNLOAD_URL = 'Xcode_8.3/Xcode_8.3.dmg'.freeze
 
 cask 'xcode' do
   version '8.3'
-  sha256 'a575614bc5a49094abf6ec2e9a3f5109b58b200bd6dc1d2d2c286b512ddba0db'
+  sha256 'accf81682a73acbaee4296aba77054b747f3b71d4d1ee7f475a2027c82a2f0d2'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode'
