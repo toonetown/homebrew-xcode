@@ -3,7 +3,7 @@ AC_DOWNLOAD = "http://adcdownload.apple.com/Developer_Tools".freeze
 DEV_HOMEPAGE = "https://developer.apple.com/downloads/".freeze
 
 def xcode_url(ac_download_url)
-  "#{XCODE_DOWNLOAD_PATH}/#{ac_download_url.split("/")[-1]}"
+  "#{XCODE_DOWNLOAD_PATH}/#{ac_download_url.split("/")[-1]}".gsub(/\.xip$/, '.dmg')
 end
 
 def xcode_caveats(ac_download_url); <<-EOS.undent
