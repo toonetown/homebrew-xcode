@@ -28,7 +28,8 @@ The following is a list of downloads (and their locations) which need to be down
 
 |                         Name                          |               Download                | Used by                                                                                                           |
 |-------------------------------------------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| <b>***</b>Xcode 8.3.3                                 | [Xcode_8.3.3.xip][]                   | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
+| <b>***</b>Xcode 9                                     | [Xcode_9.xip][]                       | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
+| <b>***</b>Xcode 8.3.3                                 | [Xcode_8.3.3.xip][]                   | *f:*`xc-sdk-ios10`                                                                                                |
 | Xcode 7.3.1                                           | [Xcode_7.3.1.dmg][]                   | *f:*`xc-sdk-osx1011`<br>*f:*`xc-sdk-ios9`                                                                         |
 | Xcode 6.4                                             | [Xcode_6.4.dmg][]                     | *f:*`xc-sdk-osx1010`<br>*f:*`xc-sdk-osx109`<br>*f:*`xc-sdk-ios8`                                                  |
 | Xcode 5.1.1                                           | [xcode_5.1.1.dmg][]                   | *f:*`xc-sdk-osx108`<br>*f:*`xc-sdk-ios7`                                                                          |
@@ -63,6 +64,7 @@ After downloading the file, convert the xip to a dmg by opening a terminal to th
 
 The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the last released version of each iOS major SDK is provided - which are:
 
+ - iOS 10.3 (as `xc-sdk-ios10`)
  - iOS 9.3 (as `xc-sdk-ios9`)
  - iOS 8.4 (as `xc-sdk-ios8`)
  - iOS 7.1 (as `xc-sdk-ios7`)
@@ -72,6 +74,7 @@ The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the l
  - iOS 3.2 (as `xc-sdk-ios3`)
 
 [//]: # (Download links)
+[Xcode_9.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_9/Xcode_9.xip
 [Xcode_8.3.3.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_8.3.3/Xcode8.3.3.xip
 [Xcode_7.3.1.dmg]: http://adcdownload.apple.com/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg
 [Xcode_6.4.dmg]: http://adcdownload.apple.com/Developer_Tools/Xcode_6.4/Xcode_6.4.dmg
