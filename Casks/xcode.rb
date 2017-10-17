@@ -1,10 +1,10 @@
 require 'pathname'
 require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_9/Xcode_9.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_9.0.1/Xcode_9.0.1.dmg'.freeze
 
 cask 'xcode' do
-  version '9'
-  sha256 '991d73df504ac13879e15611365d02e4f7b15b520fc0da99196d34fc5f10ebf9'
+  version '9.0.1'
+  sha256 '4cdc3203f2d54c9a13ae0c34962c4ac54bdcb820687b80a094d1489fbf64f1dc'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode'
@@ -22,7 +22,7 @@ cask 'xcode' do
   app 'Xcode.app'
 
   postflight do
-    app_location = appdir.join(@cask.artifacts[:app].first.summarize).to_s
+    app_location = appdir.join(@cask.artifacts.select {|a| a.is_a?(Artifact::App)}.first.summarize).to_s
     
     # Select this version of xcode
     ohai 'Selecting default version of Xcode (may require sudo)'
@@ -41,5 +41,5 @@ cask 'xcode' do
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--reset'
   end
 
-  caveats xcode_xip_caveats(AC_DOWNLOAD_URL, artifacts[:app].first.summarize)
+  caveats xcode_xip_caveats(AC_DOWNLOAD_URL, artifacts.select {|a| a.is_a?(Artifact::App)}.first.summarize)
 end
