@@ -6,7 +6,7 @@ def xcode_url(ac_download_url)
   "#{XCODE_DOWNLOAD_PATH}/#{ac_download_url.split("/")[-1]}".gsub(/\.xip$/, '.dmg')
 end
 
-def xcode_caveats(ac_download_url); <<~EOS.undent
+def xcode_caveats(ac_download_url); <<~EOS
   You must specify a location for the download files by setting the
   environment variable 'XCODE_DOWNLOAD_PATH'.  This can be specified as a
   local path (using the file:// scheme) or other URL, and will be used in
@@ -21,7 +21,7 @@ def xcode_caveats(ac_download_url); <<~EOS.undent
 end
 
 def xcode_xip_caveats(ac_download_url, appname)
-  xcode_caveats(ac_download_url.gsub(/\.dmg$/, '.xip')) + <<~EOS.undent
+  xcode_caveats(ac_download_url.gsub(/\.dmg$/, '.xip')) + <<~EOS
   After downloading the file, convert the xip to a dmg by opening a 
   terminal to the folder where the xip is placed and run the 
   following commands:
