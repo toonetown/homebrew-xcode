@@ -74,7 +74,7 @@ class XcSdkFormula < Formula
     system "link-sdks", "--sdksPath", (HOMEBREW_PREFIX + "share/legacy-sdks").to_s
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS.undent
     #{xcode_caveats(self.class.ac_download_url).rstrip}
 
     After uninstalling, you may wish to run `link-sdks` to clean up any leftover
