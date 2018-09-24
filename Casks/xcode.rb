@@ -1,10 +1,10 @@
 require 'pathname'
 require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_9.4.1/Xcode_9.4.1.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_10/Xcode_10.dmg'.freeze
 
 cask 'xcode' do
-  version '9.4.1'
-  sha256 'fe97d79be0750f7e8247f4d236d6d9fbd5d230e7adcaf322ef3d91aad2255f0d '
+  version '10'
+  sha256 '30c55ece5cde24e17758f62ae7e9f2693104759dd23e092a60fd17859917ba6f'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode'
@@ -16,14 +16,15 @@ cask 'xcode' do
     if appdir.join('Xcode.app').exist?
       raise Hbc::CaskError, 'The appstore version of Xcode is already installed'
     end
+
     super
   end
 
   app 'Xcode.app'
 
   postflight do
-    app_location = appdir.join(@cask.artifacts.select {|a| a.is_a?(Artifact::App)}.first.summarize).to_s
-    
+    app_location = appdir.join(@cask.artifacts.select { |a| a.is_a?(Artifact::App) }.first.summarize).to_s
+
     # Select this version of xcode
     ohai 'Selecting default version of Xcode (may require sudo)'
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--switch', app_location
@@ -41,5 +42,5 @@ cask 'xcode' do
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcode-select', '--reset'
   end
 
-  caveats xcode_xip_caveats(AC_DOWNLOAD_URL, artifacts.select {|a| a.is_a?(Artifact::App)}.first.summarize)
+  caveats xcode_xip_caveats(AC_DOWNLOAD_URL, artifacts.select { |a| a.is_a?(Artifact::App) }.first.summarize)
 end
