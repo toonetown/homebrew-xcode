@@ -22,7 +22,7 @@ The legacy SDKs will be installed (on disk) in their individual `Cellar` directo
 
 In order to use these formulas, you will need to download the binaries from Apple.  This can be done by logging in with your developer account at <https://developer.apple.com/downloads/> and then downloading the file.  You can view the exact file that will be downloaded by running `brew info` or `brew cask info` and looking in the `caveats` section.  Do not rename the files as you download them.
 
-By default these formulas look for downloaded files in `${HOME}/Downloads` - so downloading them directly from the web will be sufficient.  However, you can set the environment variable `XCODE_DOWNLOAD_PATH` to any (full) URL and that will be used as the location for downloading the packages.  If you want to download from a different local directory, make sure and use the `file://` protocol in `XCODE_DOWNLOAD_PATH`.
+By default these formulas look for downloaded files in `${HOME}/Downloads` - so downloading them directly from the web will be sufficient.  However, you can set the environment variable `HOMEBREW_XCODE_DOWNLOAD_PATH` to any (full) URL and that will be used as the location for downloading the packages.  If you want to download from a different local directory, make sure and use the `file://` protocol in `HOMEBREW_XCODE_DOWNLOAD_PATH`.
 
 The following is a list of downloads (and their locations) which need to be downloaded in order for all these formulas to work (i.e. if you want to run a private internal mirror).  In order to download these, you must be logged in to <https://developer.apple.com/downloads/>
 
