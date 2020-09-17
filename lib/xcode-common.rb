@@ -1,5 +1,5 @@
 XCODE_DOWNLOAD_PATH = (ENV["HOMEBREW_XCODE_DOWNLOAD_PATH"] ? ENV["HOMEBREW_XCODE_DOWNLOAD_PATH"] : "file:#{ENV["HOME"]}/Downloads").freeze
-AC_DOWNLOAD = "http://adcdownload.apple.com/Developer_Tools".freeze
+AC_DOWNLOAD = "https://download.developer.apple.com/Developer_Tools".freeze
 DEV_HOMEPAGE = "https://developer.apple.com/downloads/".freeze
 
 def xcode_url(ac_download_url)
@@ -26,8 +26,7 @@ def xcode_xip_caveats(ac_download_url, appname)
   After downloading the file, convert the xip to a dmg by opening a 
   terminal to the folder where the xip is placed and run the 
   following commands:
-    $ open #{ac_download_url.split("/")[-1].gsub(/\.dmg$/, '.xip')} && \\
-      while [ ! -d #{appname} ]; do sleep 1; done && \\
+    $ xip -x #{ac_download_url.split("/")[-1].gsub(/\.dmg$/, '.xip')} && \\
       mkdir Xcode-tmp && \\
       mv #{appname} Xcode-tmp/#{appname} && \\
       hdiutil create -volname "Xcode" \\
