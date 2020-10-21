@@ -28,7 +28,7 @@ The following is a list of downloads (and their locations) which need to be down
 
 |                         Name                          |               Download                | Used by                                                                                                           |
 |-------------------------------------------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Xcode 12                                              | [Xcode_12_GM_seed.xip][]              | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
+| Xcode 12.1                                            | [Xcode_12.1_GM_seed.xip][]            | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
 | Xcode 11.7                                            | [Xcode_11.7.xip][]                    | *f:*`xc-sdk-osx1015`<br>*f:*`xc-sdk-ios13`                                                                        |
 | Xcode 10.3                                            | [Xcode_10.3.xip][]                    | *f:*`xc-sdk-osx1014`<br>*f:*`xc-sdk-ios12`                                                                        |
 | Xcode 9.4.1                                           | [Xcode_9.4.1.xip][]                   | *f:*`xc-sdk-osx1013`<br>*f:*`xc-sdk-ios11`                                                                        |
@@ -52,14 +52,15 @@ Beginning with Xcode 8, Apple is distributing Xcode as an `xip` archive.  See be
 
 After downloading the file, convert the xip to a dmg by opening a terminal to the folder where the xip is placed and run the following commands:
 ```bash
-  $ open Xcode_X_Y_Z.xip
-  $ mkdir Xcode-tmp
-  $ mv Xcode.app Xcode-tmp/Xcode.app
-  $ hdiutil create -volname "Xcode" \
+  $ xip -x Xcode_X_Y_Z.xip && \
+    mkdir Xcode-tmp && \
+    mv Xcode.app Xcode-tmp/Xcode.app && \
+    hdiutil create -volname "Xcode" \
                    -srcfolder Xcode-tmp \
                    -ov -format UDZO \
-                   Xcode_X.Y.Z.dmg
-  $ rm -rf Xcode-tmp
+                   Xcode_X_Y_Z.dmg && \
+    rm -rf Xcode-tmp && \
+    shasum -a 256 Xcode_X_Y_Z.dmg
 ```
 
 
@@ -80,7 +81,7 @@ The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the l
  - iOS 3.2 (as `xc-sdk-ios3`)
 
 [//]: # (Download links)
-[Xcode_12_GM_seed.xip]: https://download.developer.apple.com/Developer_Tools/Xcode_12_GM_seed/Xcode_12_GM_seed.xip
+[Xcode_12.1_GM_seed.xip]: https://download.developer.apple.com/Developer_Tools/Xcode_12.1_GM_seed/Xcode_12.1_GM_seed.xip
 [Xcode_11.7.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_11.7/Xcode_11.7.xip
 [Xcode_10.3.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_10.3/Xcode_10.3.xip
 [Xcode_9.4.1.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_9.4.1/Xcode_9.4.1.xip
