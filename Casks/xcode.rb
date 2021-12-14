@@ -1,10 +1,10 @@
 require 'pathname'
 require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_13.1/Xcode_13.1.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_13.2/Xcode_13.2.dmg'.freeze
 
 cask 'xcode' do
   version '13.1'
-  sha256 '5fd393455c820f597d23f3830192ccef1848785835baf6aff273cd6a1bbb2a1e'
+  sha256 'a2cf6d044f24d13bee83b9022679c5c71e4381d9a537edc568ef9bb57d0066de'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode'
