@@ -10,8 +10,6 @@ cask 'xcode' do
   name 'Xcode'
   homepage DEV_HOMEPAGE
 
-  depends_on formula: 'toonetown/xcode/link-sdks'
-
   def depends_on
     if appdir.join('Xcode.app').exist?
       raise Hbc::CaskError, 'The appstore version of Xcode is already installed'
@@ -31,9 +29,6 @@ cask 'xcode' do
 
     ohai 'Agreeing to license'
     system '/usr/bin/sudo', '-E', '--', '/usr/bin/xcodebuild', '-license', 'accept'
-
-    ohai 'Relinking SDKs'
-    system 'link-sdks', '--xcodePath', app_location
   end
 
   uninstall_postflight do
