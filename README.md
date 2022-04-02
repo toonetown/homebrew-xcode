@@ -28,7 +28,7 @@ The following is a list of downloads (and their locations) which need to be down
 
 |                         Name                          |               Download                | Used by                                                                                                           |
 |-------------------------------------------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Xcode 13.2.1                                          | [Xcode_13.2.1.xip][]                  | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
+| Xcode 13.3                                            | [Xcode_13.3.xip][]                    | *c:*`xcode`<br>(And latest SDKs)                                                                                  |
 | Xcode 12.5                                            | [Xcode_12.5.xip][]                    | *f:*`xc-sdk-ios14`                                                                                                |
 | Xcode 11.7                                            | [Xcode_11.7.xip][]                    | *f:*`xc-sdk-osx1015`<br>*f:*`xc-sdk-ios13`                                                                        |
 | Xcode 10.3                                            | [Xcode_10.3.xip][]                    | *f:*`xc-sdk-osx1014`<br>*f:*`xc-sdk-ios12`                                                                        |
@@ -83,7 +83,7 @@ The iOS SDKs include both `iPhoneOS` and `iPhoneSimulator` combined.  Only the l
  - iOS 3.2 (as `xc-sdk-ios3`)
 
 [//]: # (Download links)
-[Xcode_13.2.1.xip]: https://download.developer.apple.com/Developer_Tools/Xcode_13.2.1/Xcode_13.2.1.xip
+[Xcode_13.3.xip]: https://download.developer.apple.com/Developer_Tools/Xcode_13.3/Xcode_13.3.xip
 [Xcode_12.5.xip]: https://download.developer.apple.com/Developer_Tools/Xcode_12.5/Xcode_12.5.xip
 [Xcode_11.7.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_11.7/Xcode_11.7.xip
 [Xcode_10.3.xip]: http://adcdownload.apple.com/Developer_Tools/Xcode_10.3/Xcode_10.3.xip
