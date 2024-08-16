@@ -1,18 +1,18 @@
 require 'pathname'
 require Pathname(@path).realpath.dirname.join('../lib', 'xcode-common') unless defined?(xcode_common)
-AC_DOWNLOAD_URL = 'Xcode_14.3/Xcode_14.3.dmg'.freeze
+AC_DOWNLOAD_URL = 'Xcode_15.4/Xcode_15.4.dmg'.freeze
 
 cask 'xcode' do
-  version '14.3'
-  sha256 '869ae7f0ac72f112b5c6739dac4fef21a198bd892f7d92d3268f250618501f2e'
+  version '15.4'
+  sha256 'dda7e2d87cde3c52e06b71959f6cea1412cf5c19c619b43e614d8f15aa87bec1'
 
   url xcode_url(AC_DOWNLOAD_URL)
   name 'Xcode'
   homepage DEV_HOMEPAGE
 
-  def depends_on
+  def conflicts_with
     if appdir.join('Xcode.app').exist?
-      raise Hbc::CaskError, 'The appstore version of Xcode is already installed'
+      raise 'The appstore version of Xcode is already installed'
     end
 
     super
